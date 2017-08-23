@@ -12,8 +12,8 @@ namespace CLRViaCsharp.Events
 
         private void HandleIncomingProcess(object sender, ProcessDoneEventArgs eventArgs)
         {
-            Console.WriteLine($"Finished process from Processor: {((Processor)sender).Id} at: {eventArgs.Done}\n" +
-                              $"Result: {((Processor)sender).Result}\n" +
+            Console.WriteLine($"Recived process from Processor: {((Processor)sender).Id} at: {DateTime.Now}\n" +
+                              $"Result: {eventArgs.Process.Result}\n" +
                               $"initializing Distribution");
         }
     }
