@@ -13,7 +13,8 @@ namespace CLRViaCsharp
             var indexer = new IndexerTest();
 
             Test del = x => x == "hej" ? 1 : 2;
-            del.Invoke("asd");
+            Test y = (b) => b == "hej" ? 1 : 2;
+            //del.Invoke("asd");
             //Console.WriteLine(indexer[4]);
             //Console.ReadKey();
 
@@ -24,7 +25,7 @@ namespace CLRViaCsharp
             var pro = new Processor();
             var dist = new Distributor(pro);
             var manager = new Manager(pro);
-
+            
             pro.Process();
             Console.ReadKey();
         }

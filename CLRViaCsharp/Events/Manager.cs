@@ -10,7 +10,7 @@ namespace CLRViaCsharp.Events
     {
         private Collection<ProcessLog> _processLogs;
         public IEnumerable<ProcessLog> ProcessLogs => _processLogs;
-        public Manager(Processor processor)
+        public Manager(ISubscribable processor)
         {
             _processLogs = new Collection<ProcessLog>();
             processor.ProcessStarted += LogProcessStart;

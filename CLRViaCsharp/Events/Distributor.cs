@@ -5,7 +5,7 @@ namespace CLRViaCsharp.Events
 {
     internal sealed class Distributor
     {
-        public Distributor(Processor processor)
+        public Distributor(ISubscribable processor)
         {
             processor.ProcessDone += HandleIncomingProcess;
         }

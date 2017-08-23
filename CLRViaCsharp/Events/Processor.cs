@@ -4,7 +4,7 @@ using CLRViaCsharp.Events.EventArgs;
 
 namespace CLRViaCsharp.Events
 {
-    internal class Processor
+    internal class Processor : ISubscribable
     {
 
         private Guid _id = Guid.NewGuid();

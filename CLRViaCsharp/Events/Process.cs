@@ -23,6 +23,7 @@ namespace CLRViaCsharp.Events
         }
         public Process(int result)
         {
+
             _result = result;
         }
     }
