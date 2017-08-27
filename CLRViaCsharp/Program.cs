@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using CLRViaCsharp.Events;
 using CLRViaCsharp.ExplicitlyImplementingEvents;
 using CLRViaCsharp.Indexer;
 
@@ -33,7 +31,7 @@ namespace CLRViaCsharp
 
             //pro.Process();
             var lotsOfEventsType= new LotsOfEventsType();
-            var respondeToEvent = new RespondToEvent(lotsOfEventsType);
+            var respondeToEvent = new ListenToEvent(lotsOfEventsType);
             lotsOfEventsType.ImDoingIt();
             Console.ReadKey();
         }
