@@ -9,6 +9,7 @@ namespace CLRViaCsharp.ExplicitlyImplementingEvents
         {
             //lotsOfEvents.DoSomethingImplicit += RespondToEvent;
             //lotsOfEvents.DoSomethingExplicit += RespondToEvent;
+            //lotsOfEvents.DoSometingExlicitClrWay += RespondToEvent;
         }
 
         private void RespondToEvent(object sender, EventArgs e)
