@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.InteropServices;
+using CLRViaCsharp.CharEncoding;
 using CLRViaCsharp.ExplicitlyImplementingEvents;
 using CLRViaCsharp.Indexer;
 
@@ -33,6 +35,15 @@ namespace CLRViaCsharp
             var lotsOfEventsType= new LotsOfEventsType();
             var respondeToEvent = new ListenToEvent(lotsOfEventsType);
             lotsOfEventsType.ImDoingIt();
+            var stringEncoder = new StringEncoder();
+            var encodedString = stringEncoder.Encoder("hej");
+            foreach (var bt in encodedString)
+            {
+                Console.Write(bt);
+            }
+            Console.WriteLine();
+            var decodedString = stringEncoder.Decoder(encodedString);
+            Console.WriteLine(decodedString);
             Console.ReadKey();
         }
 

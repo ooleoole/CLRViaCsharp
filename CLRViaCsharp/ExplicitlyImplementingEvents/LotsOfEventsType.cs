@@ -12,16 +12,19 @@ namespace CLRViaCsharp.ExplicitlyImplementingEvents
         private readonly EventSet _eventsClrWay = new EventSet();
 
         public event EventHandler<EventArgs> DoSomethingImplicit;
+
         public event EventHandler<EventArgs> DoSomethingExplicit
         {
             add => _events.AddHandler(EventSomethingHappend, value);
             remove => _events.RemoveHandler(EventSomethingHappend, value);
         }
+
         public event EventHandler<EventArgs> DoSometingExlicitClrWay
         {
             add => _eventsClrWay.Add(Key, value);
             remove => _eventsClrWay.Remove(Key, value);
         }
+
         public void ImDoingIt()
         {
             Console.WriteLine("I did something");
@@ -30,6 +33,7 @@ namespace CLRViaCsharp.ExplicitlyImplementingEvents
             OnSomethingExplicitClr(EventArgs.Empty);
 
         }
+
         protected virtual void OnSomethingExplicit(EventArgs e) =>
             ((EventHandler<EventArgs>)_events[EventSomethingHappend])?.Invoke(this, e);
 
